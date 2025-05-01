@@ -24,6 +24,9 @@ const HomePage = () => {
 					fetchFeaturedProducts(),
 				])
 
+				console.log('Categories data:', categoriesData)
+				console.log('Products data:', productsData)
+
 				setCategories(categoriesData)
 				setFeaturedProducts(productsData)
 			} catch (error) {
@@ -53,7 +56,8 @@ const HomePage = () => {
 				</div>
 
 				<div className='categories-grid'>
-					{categories &&
+					{Array.isArray(categories) &&
+						categories &&
 						categories?.map(category => (
 							<motion.div
 								key={category._id}
