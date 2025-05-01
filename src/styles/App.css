@@ -1,0 +1,86 @@
+:root {
+	--primary-color: #6a11cb;
+	--secondary-color: #2575fc;
+	--accent-color: #ff4081;
+	--background-color: hsl(240, 96%, 18%);
+	--text-color: #f5f0f0;
+	--border-color: #c6c4c4;
+	--card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	--transition-speed: 0.3s;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: var(--background-color);
+	color: var(--text-color);
+	line-height: 1.6;
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.main-content {
+	flex: 1;
+	padding: 1rem;
+	padding-bottom: 5rem;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	transition: all var(--transition-speed) ease;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	transition: all var(--transition-speed) ease;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-size: 1.5rem;
+	color: var(--primary-color);
+}
+
+.section-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.section-header h2 {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.view-all {
+	color: var(--primary-color);
+	font-weight: 500;
+}
+
+.error-message {
+	text-align: center;
+	padding: 2rem;
+	font-size: 1.2rem;
+	color: #d32f2f;
+}
