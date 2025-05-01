@@ -53,16 +53,17 @@ const HomePage = () => {
 				</div>
 
 				<div className='categories-grid'>
-					{categories.map(category => (
-						<motion.div
-							key={category._id}
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.3 }}
-						>
-							<CategoryCard category={category} />
-						</motion.div>
-					))}
+					{categories &&
+						categories?.map(category => (
+							<motion.div
+								key={category._id}
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.3 }}
+							>
+								<CategoryCard category={category} />
+							</motion.div>
+						))}
 				</div>
 			</section>
 
@@ -75,16 +76,17 @@ const HomePage = () => {
 				</div>
 
 				<div className='products-grid'>
-					{featuredProducts.map(product => (
-						<motion.div
-							key={product._id}
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.3 }}
-						>
-							<ProductCard product={product} />
-						</motion.div>
-					))}
+					{featuredProducts &&
+						featuredProducts?.map(product => (
+							<motion.div
+								key={product._id}
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.3 }}
+							>
+								<ProductCard product={product} />
+							</motion.div>
+						))}
 				</div>
 			</section>
 		</div>
